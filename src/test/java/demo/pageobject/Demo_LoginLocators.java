@@ -12,7 +12,6 @@ public class Demo_LoginLocators {
 		super();
 		this.driver = driver;
 	}
-
 	private By username = By.id("username");
 	private By password = By.id("password");
 	private By submit = By.id("log-in");
@@ -22,12 +21,12 @@ public class Demo_LoginLocators {
 		driver.findElement(username).sendKeys(UserName);
 		driver.findElement(password).sendKeys(Password);
 		driver.findElement(submit).click();
-		 
+
 	}
+
 	public String getUserName() {
 		WebElement welcometext = driver.findElement(By.cssSelector("div[class='logged-user-name']"));
 		String WelcomeUserName = welcometext.getText();
-		 return WelcomeUserName;
+		return WelcomeUserName;
 	}
-
 }
